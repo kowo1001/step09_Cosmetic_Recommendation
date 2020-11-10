@@ -61,6 +61,7 @@ public class EmployeeDTO {
 			System.out.println( al.get(i)+"이면 " +al2.get(i)+"입니다.");
 		}
 	}
+	
 	public static void buyCosmetics(ArrayList al) { //아이디 같으면, --님 --타입이시므로 --화장품 구매하셨습니다. 가격 : xxx
 		System.out.println("=====직원 및 고객 화장품 구매이력 기록=====");
 		if(al.get(0).equals("yaj")) {

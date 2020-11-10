@@ -8,7 +8,7 @@ import object.domain.EmployeeDTO;
 
 public class StartView {
 	public static void main(String[] args) {
-		ArrayList al = new ArrayList(); 
+		ArrayList al = new ArrayList(); //직원정보 저장
 		al.add("employee");
 		al.add("sensitive skin");
 		al.add("닥터 바이오 크림");
