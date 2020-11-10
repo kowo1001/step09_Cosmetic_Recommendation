@@ -1,52 +1,42 @@
 
 package view;
 
-import sale.domain.Cosmetic;
-import sale.domain.Customer;
-
 import java.util.ArrayList;
+import object.domain.CustomerDTO;
 
 public class EndView {
-	//객체 받아서 출력만 담당
-	public static void printCosmetics(Cosmetic[] cosmetic) {
-		for (int i = 0; i< cosmetic.length; i++) {
-			System.out.println("화장품: " + cosmetic[i].getCosmetic() + " / " + "피부타입 : " + cosmetic[i].getSkin_type() + " / " + "가격 : " + cosmetic[i].getCosmetic_price() + "원");
-		}
-	}
+	public static void main(String[] args) {
+	//화장품 추천을 받고 화장품을 구매한 고객 관점(화장품 추천 받기 및 화장품 구매)
+		
+	CustomerDTO.getChoice(); //Slf4j를 이용한 화장품 추천 받은 기록
 	
-	public static void printCosmetics() {
-		ArrayList al = new ArrayList(); 
-		ArrayList al2 = new ArrayList();
-		
-		al.add("지성"); 
-		al.add("건성");
-		al.add("예민"); 
-		al.add("복합성");
-		
-		al2.add("오휘미라클아쿠아 젤크림");
-		al2.add("뉴트로지나 하이드로 부스트 크림");
-		al2.add("닥터바이오 크림");
-		al2.add("라네즈베이직라이트 크림");
-		
-		for (int i = 0; i< al.size(); i++) {
-			System.out.println( al.get(i)+"이면 " +al2.get(i)+"입니다.");
-		}
-	}
+	ArrayList al2 = new ArrayList(); //ArrayList를 이용한 고객 아이디,피부타입,화장품,화장품가격 데이터 저장
+	al2.add("jjw");
+	al2.add("combination skin");
+	al2.add("라네즈베이직라이트 크림");
+	al2.add(34300);
+//	ArrayList al = new ArrayList(); 
+//	al.add("cjs");
+//	al.add("sensitive skin");
+//	al.add("닥터 바이오 크림");
+//	al.add(20400);
+//	ArrayList al1 = new ArrayList(); 
+//	al1.add("ljm");
+//	al1.add("dry skin");
+//	al1.add("뉴트로지나 하이드로 부스트 크림");
+//	al1.add(24086);
+//	ArrayList al3 = new ArrayList(); 
+//	al3.add("yaj");
+//	al3.add("oily skin");
+//	al3.add("오휘미라클아쿠아 젤크림");
+//	al3.add(51300);
 	
-	public static void printCustomer(){
-		Customer c = Customer.builder().id("이정민").skin_type("건성").grade("vip").build();
-		System.out.println(c.toString());
-		
-		Customer c2 = Customer.builder().id("염아정").skin_type("지성").grade("silver").build();
-		System.out.println(c2.toString());
-		
-		Customer c3 = Customer.builder().id("장종욱").skin_type("복합성").grade("member").build();
-		System.out.println(c3.toString());
-		
-		Customer c4 = Customer.builder().id("최지수").skin_type("예민").grade("nonmember").build();
-		System.out.println(c4.toString());
-	}
 
+	CustomerDTO.buyCosmetics(al2); //Log4j를 이용한 고객 화장품 구매이력 기록
+//	CustomerDTO.buyCosmetics(al);
+//	CustomerDTO.buyCosmetics(al1);
+//	CustomerDTO.buyCosmetics(al3);
+	}
 }
 	
 

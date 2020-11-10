@@ -1,15 +1,15 @@
 package data.model;
 
-import sale.domain.Customer;
+import object.domain.CustomerDTO;
 
 
 public class Data_Customer {
 	
-	public static Customer[] getCustomer() {
-		Customer [] all = {new Customer("yaj", "0011", "vip","oily skin"), 
-					new Customer("jjw", "0022", "vip","combination skin"),
-					new Customer("ljm", "0033","vip","dry skin"), 
-					new Customer("cjs", "0044","vip","sensitive skin")}; 
+	public static CustomerDTO[] getCustomer() {
+		CustomerDTO [] all = {new CustomerDTO("yaj", "0011", "silver","oily skin"), 
+					new CustomerDTO("jjw", "0022", "member","combination skin"),
+					new CustomerDTO("ljm", "0033","vip","dry skin"), 
+					new CustomerDTO("cjs", "0044","nonmember","sensitive skin")}; 
 		
 		return all;
 	}
